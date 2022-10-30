@@ -3,35 +3,9 @@
 
 using namespace std;
 
-/* calculator mk.2 */
+/* Pointers - 2:59:00 on video */
 
 int main() {
-
-    int num1, num2;
-    char op;
-
-    cout << "Enter first number: ";
-    cin >> num1;
-    cout << "Enter operator: ";
-    cin >> op;
-    cout << "Enter second number: ";
-    cin >> num2;
-    int result;
-    if(op == '+') {
-        result = num1 + num2;
-    } else if(op == '-') {
-        result = num1 - num2;
-    } else if(op == '/') {
-        result = num1 / num2;
-    } else if(op == '*') {
-        result = num1 * num2;
-    } else {
-        cout << "Invalid operator";
-    }
-    cout << result;
-
-
-
     return 0;
 }
 
@@ -265,4 +239,166 @@ int main() {
 
         return 0;
     }
+*/
+
+/* switch statements 
+
+string getDayOfWeek(int dayNum){
+    string dayName;
+
+    switch(dayNum){
+        case 0:
+            dayName = "sunday";
+            break;
+        case 1:
+            dayName = "monday";
+            break;
+        case 2:
+            dayName = "tuesday";
+            break;
+        case 3:
+            dayName = "wednesday";
+            break;
+        case 4:
+            dayName = "thursday";
+            break;
+        case 5:
+            dayName = "friday";
+            break;
+        case 6:
+            dayName = "saturday";
+            break;
+        default:
+            dayName = "Invalid day number";
+    }
+
+    return dayName;
+
+}
+
+int main() {
+
+    cout << getDayOfWeek(10) << endl;
+
+    return 0;
+}
+*/
+
+/* while loops 
+
+
+    int main() {
+
+        int index = 6;
+        do {
+            cout << index << endl;
+            index++;
+        } while(index <= 5);
+        return 0;
+    }
+*/
+
+/* guessing game 
+
+
+    int main() {
+
+        int secretNum = 7;
+        int guess;
+        int guessCount = 0;
+        int guessLimit = 3;
+        bool outOfGuesses = false;
+
+        while(secretNum != guess && !outOfGuesses){
+            if(guessCount < guessLimit){
+                cout << "Enter guess: ";
+                cin >> guess;
+                guessCount++;
+            } else {
+                outOfGuesses = true;
+            }
+            
+        }
+
+        if(outOfGuesses){
+            cout << "You lose hahahahahaha" << endl;
+        } else {
+            cout << "Clever girl..." << endl;
+        }
+
+        return 0;
+    }
+
+*/
+
+/* for loops 
+
+    int main() {
+
+        int index = 1;
+        // while(index <= 5) {
+        //     cout << index << endl;
+        //     index++;
+        // }
+
+        int nums[] = {1, 2, 5, 7, 3};
+        for(int i = 0; i < 5; i++){
+            cout << nums[i] << endl;
+        }
+        return 0;
+    }
+*/
+
+/* exponent function 
+
+int power(int baseNum, int powNum){
+    int result = 1;
+    for(int i = 0; i < powNum; i++) {
+        result = result * baseNum;
+    }
+    return result;
+}
+
+int main() {
+    cout << power(4, 2) << endl;
+    return 0;
+}
+*/
+
+/* 2d arrays 
+
+    int main() {
+
+        int numberGrid[3][2] = {
+            {1, 2}, 
+            {3, 4}, 
+            {5, 6}
+        };
+        cout << numberGrid[2][0] << endl;
+
+        return 0;
+    }
+
+*/
+
+/* nested loops 
+
+    int main() {
+
+        int numberGrid[3][2] = {
+            {1, 2}, 
+            {3, 4}, 
+            {5, 6}
+        };
+        
+        for(int i = 0; i < 3; i++){
+            for(int j = 0; j < 2; j++){
+                cout << numberGrid[i][j];
+            }
+            cout << endl;
+        }
+
+        return 0;
+    }
+
 */
