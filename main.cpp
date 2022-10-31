@@ -3,11 +3,7 @@
 
 using namespace std;
 
-/* Pointers - 2:59:00 on video */
 
-int main() {
-    return 0;
-}
 
 /* All the  below are built into int main() {} function */
 
@@ -401,4 +397,181 @@ int main() {
         return 0;
     }
 
+*/
+
+/* Pointers - 2:59:00 on video 
+
+int main() {
+
+    int age = 19;
+    // Pointer variable - a;ways put lower p before variable
+    int *pAge = &age;
+    double gpa = 2.7;
+    double *pGpa = &gpa;
+    string name = "Stephen";
+    string *pName = &name;
+
+    // cout << "Age: " << pAge << endl;
+    // cout << "Gpa: " << pGpa << endl;
+    // cout << "Name: " << pName << endl;
+
+    // De-referencing a pointer - grabbing the address from the variable.
+    // cout << *pAge;
+
+    cout << *&gpa;
+    return 0;
+}
+*/
+
+/* classes and objects 
+//This is the class
+class Book {
+    public:
+        string title;
+        string author;
+        int pages;
+};
+
+int main() {
+    //This is turning the class into an object
+    Book book1;
+    book1.title = "Harry Potter";
+    book1.author = "JK Rowling";
+    book1.pages = 500;
+
+    Book book2;
+    book2.title = "Lord of the Rings";
+    book2.author = "JRR Tolkien";
+    book2.pages = 700;
+    book2.title = "Hunger Games";
+
+
+
+    cout << book1.title << endl;
+    cout << book2.title << endl;
+
+    return 0;
+}
+*/
+
+/* constructor functions - a function thats called when we create an object of a class 
+
+class Book {
+    public:
+        string title;
+        string author;
+        int pages;
+        // Constructor
+        Book(string aTitle, string aAuthor, int aPAges){
+            title = aTitle;
+            author = aAuthor;
+            pages = aPAges;
+        }
+};
+
+int main() {
+    // Constructor lays out the groundwork, pass book info into function to create the object in 1 line of code.
+    Book book1("Harry Potter", "JK Rowling", 500);
+    Book book2("Lord of the Rings", "JRR Tolkien", 700);
+
+
+
+    cout << book1.title << endl;
+    cout << book2.title << endl;
+
+    return 0;
+}
+*/
+
+/* object functions 
+
+class Student {
+    public:
+        string name;
+        string major;
+        double gpa;
+        // Constructor
+        Student(string aName, string aMajor, double aGpa){
+            name = aName;
+            major = aMajor;
+            gpa = aGpa;
+        }
+        // created in the class to be called on by an object
+        bool hasHonours(){
+            if(gpa >= 3.5){
+                return true;
+            }
+            return false;
+        }
+};
+*/
+
+/* getters and setters 
+
+class Movie {
+    private:
+        string rating;
+    public:
+        string title;
+        string director;
+        // Constructor
+        Movie(string aTitle, string aDirector, string aRating){
+            title = aTitle;
+            director = aDirector;
+            setRating(aRating);
+        }
+    // Set
+    void setRating(string aRating){
+        if(aRating == "G" || aRating == "PG" || aRating == "PG-13" || aRating == "R" || aRating == "NR"){
+            rating = aRating;
+        } else {
+            rating = "NR";
+        }
+    }
+    // Get
+    string getRating(){
+        return rating;
+    }
+};
+
+*/
+
+/* inheritance 
+
+class Chef {
+
+    public:
+        void makeChicken(){
+            cout << "The chef makes chicken" << endl;
+        }
+        void makeSalad(){
+            cout << "The chef makes salad" << endl;
+        }
+        void makeSpecialDish(){
+            cout << "The chef makes special dish" << endl;
+        }
+};
+
+// inherits from the above class - also called a sub-class
+class ItalianChef : public Chef {
+    // this is added as additional to the above class. The regualr chef cannot access this.
+    public:
+        void makePasta(){
+            cout << "The chef made pasta" << endl;
+        }
+        void makeSpecialDish(){
+            cout << "The chef makes a mess" << endl;
+        }
+
+};
+
+int main() {
+    Chef chef;
+    chef.makeSpecialDish();
+
+    ItalianChef italianChef;
+    italianChef.makeSpecialDish();
+
+    return 0;
+}
 */
